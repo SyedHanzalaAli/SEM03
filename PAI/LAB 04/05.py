@@ -25,7 +25,7 @@ class Vehicle:
         print(f"{self.make} {self.model} is available for rent")
 
     def calculateRentalCost(self , days):
-        return self.__rentalPrice *days
+        return self.__rentalPrice * days
     
     def displayDetails(self):
         status = "Available" if self.isAvailable else "Rented"
@@ -46,6 +46,23 @@ class Truck(Vehicle):
         print("Truck Details : ")
         super().displayDetails()
 
+class RentalReservation:
+    def __init__(self, vehicle, customer, start_date, end_date):
+        self.vehicle = vehicle
+        self.customer = customer
+        self.start_date = start_date
+        self.end_date = end_date
+        self.total_cost = self.vehicle.calculateRentalCost((self.end_date - self.start_date).days)
+        self.customer.addRental(self)
+
+    def displayReservationDetails(self):
+        print(f"Reservation Details for {self.customer.name}:")
+        self.vehicle.displayDetails()
+        print(f"Rental Period: {self.start_date} to {self.end_date}")
+        print(f"Total Cost: ${self.total_cost}")
+        print(f"Customer Contact Info: {self.customer.getContactInfo()}")
+        print("-" * 50)
+
 class Customer:
     def __init__(self , name , contactInfo):
         self.name = name
@@ -58,4 +75,28 @@ class Customer:
     def addRental(self , reservation):
         self.rentalHistory.append(reservation)
 
-    def displayRentalHistory
+    def displayRentalHistory(self):
+        print(f"Rental History for {self.name}:")
+        if self.rentalHistory:
+            for rental in self.rentalHistory:
+                rental.displayReservationDetails()
+        else:
+            print("No rental history found.")
+        print("-" * 50)
+
+
+
+car1 = Car("Toyota", "Camry", 50)
+suv1 = SUV("Ford", "Explorer", 75)
+truck1 = Truck("Ram", "1500", 100)
+
+customer1 = Customer("John Doe", "john.doe@example.com")
+
+car1.rentVehicle()
+reservation1 = RentalReservation(car1, customer1, date(2025, 10, 1), date(2025, 10, 7))
+
+customer1.displayRentalHistory()
+
+car1.returnVehicle()
+
+car1.displayDetails()
