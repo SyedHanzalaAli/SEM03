@@ -1,0 +1,33 @@
+Hypothesis 1: Women and Children First
+Sex     Age Group
+female  Child        0.388350
+        Teen         0.753247
+        Adult        0.699561
+        Senior       1.000000
+male    Child        0.320000
+        Teen         0.086957
+        Adult        0.202624
+        Senior       0.111111
+Name: Survived, dtype: float64
+
+Conclusion:
+Based on the survival rates for each combination of Sex and AgeGroup, the results strongly support the 'women and children first' hypothesis. Female passengers had much higher survival rates than male passengers across almost all age groups. Among children, females also survived at a higher rate than males. Male adults had the lowest survival rates of all groups. These trends match the historical accounts of the Titanic evacuation policy, where women and children were given priority for seats on the lifeboats. Overall, the grouped survival data clearly confirms that gender and age played a major role in determining survival.
+
+Hypothesis 2: Wealthy Passengers Survived More
+Method A (By Passenger Class):
+Pclass
+1    0.689055
+2    0.480000
+3    0.239057
+Name: Survived, dtype: float64
+
+Method B (By Fare Bins):
+FareBin
+low         0.229426
+medium      0.441687
+high        0.336449
+VeryHigh    0.609418
+Name: Survived, dtype: float64
+
+Conclusion:
+The analysis of survival rates by passenger class shows that first-class passengers had the highest survival rate, followed by second-class, while third-class passengers had the lowest survival rate. To further verify this, passengers were also grouped into fare ranges using fare bins. The results were consistent: passengers who paid higher fares had a noticeably higher chance of surviving. These two methods together confirm that wealthier passengers were more likely to survive the disaster, most likely due to better cabin locations and earlier access to lifeboats.
