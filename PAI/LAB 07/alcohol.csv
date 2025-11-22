@@ -1,0 +1,21 @@
+Year,WHO Region,Country,Beverage Types,Display Value
+1987,Africa,CountryC,Spirits,7.62
+1985,Africa,CountryB,Wine,4.05
+1990,Americas,CountryC,Spirits,9.45
+1999,Asia,CountryA,Other,6.78
+1991,Western Pacific,CountryE,Wine,4.73
+1993,Asia,CountryE,Other,2.18
+1988,Africa,CountryB,Beer,8.31
+1989,Europe,CountryB,Wine,9.99
+1984,Americas,CountryC,Beer,1.87
+1982,Africa,CountryE,Other,6.21
+1983,Western Pacific,CountryD,Spirits,1.75
+1980,Europe,CountryE,Spirits,7.05
+1996,Americas,CountryA,Wine,2.83
+1998,Asia,CountryE,Spirits,0.82
+1992,Western Pacific,CountryE,Wine,9.45
+1986,Asia,CountryE,Beer,3.75
+1995,Africa,CountryB,Other,4.92
+1981,Asia,CountryC,Wine,5.59
+1994,Asia,CountryB,Spirits,2.45
+1997,Asia,CountryD,Other,6.36
